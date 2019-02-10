@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery 表单验证</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap wrap-sm">
+    <div class="header">
+        <h1>注册</h1>
+    </div>
+    <div class="form">
+        <form action="" id="signup">
+            <div class="input-wrap">
+                <label for="">姓名</label>
+                <input data-rule='maxlength:15|minlength:2|pattern:"^[a-zA-Z\\u4e00-\\u9fa5]+$"'
+                       type="text"
+                       name="name"
+                       class="input-control"
+                       placeholder="2到15位字符">
+                <div id="name-input-message" class="input-message">姓名格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">用户名</label>
+                <input data-rule='maxlength:15|minlength:2|pattern:"^[a-z]+$"'
+                       type="text"
+                       name="username"
+                       class="input-control"
+                       placeholder="2到15位大小写字母">
+                <div id="username-input-message" class="input-message">用户名格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">密码</label>
+                <input data-rule='maxlength:28|minlength:8'
+                       type="password"
+                       name="password"
+                       class="input-control"
+                       placeholder="8到28位任意字符">
+                <div id="password-input-message" class="input-message">密码格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">年龄</label>
+                <input data-rule='max:120|min:18'
+                       type="text"
+                       name="age"
+                       class="input-control"
+                       placeholder="最低年龄为18岁">
+                <div id="age-input-message" class="input-message">年龄格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">手机</label>
+                <input data-rule='pattern:"^1\\d{10}$"'
+                       type="text"
+                       name="phone"
+                       class="input-control"
+                       placeholder="请填写有效的11位手机号码">
+                <div id="phone-input-message" class="input-message">手机号码格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">身份证</label>
+                <input data-rule='pattern:"^[1-9]\\d{16}[0-9x?]$"'
+                       type="text"
+                       name="idcard"
+                       class="input-control"
+                       placeholder="请填写有效的18位身份证号码">
+                <div id="idcard-input-message" class="input-message">证件号码格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">邮箱</label>
+                <input data-rule='pattern:"^\\w+@\\w+\\.[a-zA-Z]{2,5}$"'
+                       type="text"
+                       name="email"
+                       class="input-control"
+                       placeholder="请填写有效的邮箱地址">
+                <div id="email-input-message" class="input-message">邮箱格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">自我介绍</label>
+                <input data-rule='maxlength:120|required:false'
+                       type="text"
+                       name="intro"
+                       class="input-control">
+                <div id="intro-input-message" class="input-message">自我介绍格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <button type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+    
+
+<script src="js/jquery.js"></script>
+<script src="js/validator.js"></script>
+<script src="js/input.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
